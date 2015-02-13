@@ -24,6 +24,7 @@ subtract_vectors = function(vectors){
       product[v] = product[v] - vectors[i][v];
     }
   }
+  console.log('\n'+'-'.repeat(4))
   return product;
 }
 
