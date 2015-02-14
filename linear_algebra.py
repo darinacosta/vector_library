@@ -21,8 +21,13 @@ def add_2d_vectors(vectors):
   print 'sum:      ' + str(product)
   plt.show()
 
-def plot_vector(vector):
-  x = [0, vector[0]]
-  y = [0, vector[1]]
-  plt.plot(x,y)
+def scale_2d_vector(vector, scalar):
+  product = [0] * len(vector)
+  i = 0
+  for point in vector:
+    product[i] = point * scalar
+    i = i + 1
+  plt.plot([0, vector[0]],[0, vector[1]])
+  plt.plot([0, product[0]],[0, product[1]])
   plt.show()
+  return product
