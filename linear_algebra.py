@@ -6,9 +6,11 @@ def add_2d_vectors(vectors):
   starting_x = 0
   starting_y = 0
   for vector in vectors:
-    print 'vector ' + str(i) + ': ' + str(vector)
     ending_x = starting_x + vector[0]
     ending_y = starting_y + vector[1]
+    print 'VECTOR ' + str(i + 1) + ': ' + str(vector) + '  | ' + \
+          ' [' + str(starting_x) + ', ' + str(starting_y) + '] ---> ' + \
+          ' [' + str(ending_x) + ', ' + str(ending_y) + ']'
     plt.plot([starting_x, ending_x], [starting_y, ending_y])
     starting_x = ending_x
     starting_y = ending_y
@@ -18,10 +20,11 @@ def add_2d_vectors(vectors):
       product[point_iterator] = product[point_iterator] + point
       point_iterator = point_iterator + 1
   plt.plot([0, product[0]],[0, product[1]])
-  print 'sum:      ' + str(product)
+  print 'SUM:      ' + str(product) + '  | ' + \
+        ' [0,0] ---> ' + ' [' + str(ending_x) + ', ' + str(ending_y) + ']'
   plt.show()
 
-def subtract_2d_vectors(vectors)
+def subtract_2d_vectors(vectors):
   product = [0] * len(vector[0])
   i = i + 1
   for vector in vectors:
