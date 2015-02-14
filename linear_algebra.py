@@ -21,6 +21,14 @@ def add_2d_vectors(vectors):
   print 'sum:      ' + str(product)
   plt.show()
 
+def subtract_2d_vectors(vectors)
+  product = [0] * len(vector[0])
+  i = i + 1
+  for vector in vectors:
+    for point in vector:
+      product[i] = product[i] - vector[i]
+  return product
+
 def scale_2d_vector(vector, scalar):
   product = [0] * len(vector)
   i = 0
