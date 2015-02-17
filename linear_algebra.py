@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import math as math
 
 def add_2d_vectors(vectors):
   product = [0] * len(vectors[0])
@@ -42,3 +43,14 @@ def scale_2d_vector(vector, scalar):
   plt.plot([0, product[0]],[0, product[1]])
   plt.show()
   return product
+
+def calculate_vector_unit(vector):
+  hypotenuse = math.sqrt(vector[0]**2 + vector[1]**2)
+  product = [vector[0]/hypotenuse, vector[1]/hypotenuse]
+  ax.arrow(0, 0, 0.5, 0.5, head_width=0.05, head_length=0.1, fc='k', ec='k')
+  plt.plot([0, vector[0]],[0, vector[1]])
+  plt.plot([0, product[0]],[0, product[1]])
+  plt.show()
+
+
+
